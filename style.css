@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background-color: #f7fafc;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4a5568;
+  padding: 5px 0;
+  position: relative;
+}
+
+nav a:hover {
+  color: #2b6cb0;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2b6cb0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.banner {
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.85), rgba(43, 108, 176, 0.7)),
+              url('telomoyo1.jpeg') center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e2e8f0;
+  color: #2b6cb0;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.konten-section {
+  padding: 70px 0;
+}
+
+.bg-light {
+  background-color: #edf2f7;
+}
+
+.konten-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a365d;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.konten-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3182ce;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#tentang p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  text-align: justify;
+  color: #4a5568;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #718096;
+}
+
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.foto-item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.foto-item:hover {
+  transform: scale(1.02);
+}
+
+.foto-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.foto-item figcaption {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #718096;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #edf2f7;
+}
+
+.info-box {
+  background: #ffffff;
+  border-left: 5px solid #3182ce;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.info-box ul {
+  list-style: none;
+}
+
+.info-box li {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.info-box li:last-child {
+  margin-bottom: 0;
+}
+
+.info-box strong {
+  color: #1a365d;
+}
+
+footer {
+  background-color: #1a365d;
+  color: #cbd5e0;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+footer strong {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .konten-section {
+    padding: 45px 0;
+  }
+}
